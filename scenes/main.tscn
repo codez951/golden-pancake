@@ -8,10 +8,19 @@
 [node name="Node" type="Node" unique_id=1439567245]
 
 [node name="Paddle" parent="." unique_id=405808638 instance=ExtResource("1_0wfyh")]
-position = Vector2(254, 526)
+position = Vector2(219, 622)
 
 [node name="RightPaddle" parent="." unique_id=1817472574 instance=ExtResource("2_sugp2")]
-position = Vector2(1670, 517)
+position = Vector2(1670, 600)
 texture = ExtResource("3_jyhfs")
 
 [node name="Ball" parent="." unique_id=2049430417 instance=ExtResource("4_tbgi4")]
+position = Vector2(960, 600)
+
+[node name="Sprite2D" parent="Ball" index="0" unique_id=1514047682]
+scale = Vector2(0.2, 0.19)
+
+[node name="CollisionShape2D" parent="Ball" index="1" unique_id=622245170]
+position = Vector2(1, 1)
+
+[editable path="Ball"]
