@@ -11,4 +11,4 @@ func _process(delta: float) -> void:
 		
 	var velocity = movement_direction * speed
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
+	position.y = clamp(position.y, half_height, screen_size.y - half_height)

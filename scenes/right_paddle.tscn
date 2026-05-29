@@ -4,4 +4,5 @@
 [ext_resource type="Script" uid="uid://dtlci6rta2621" path="res://scripts/right_paddle.gd" id="2_mo4dg"]
 
 [node name="RightPaddle" unique_id=405808638 instance=ExtResource("1_hihsc")]
+position = Vector2(130.00002, 528)
 script = ExtResource("2_mo4dg")

@@ -2,9 +2,11 @@ extends Sprite2D
 
 var speed = 1000
 var screen_size
+var half_height
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	half_height = texture.get_height() * scale.y / 2.0
 
 func hello_world():
 	print("Hello World!")
@@ -20,4 +22,4 @@ func _process(delta: float) -> void:
 		
 	var velocity = movement_direction * speed
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
+	position.y = clamp(position.y, half_height, screen_size.y - half_height)

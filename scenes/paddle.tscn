@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://qhirq80viev0"]
 
-[ext_resource type="Texture2D" uid="uid://ddms0qc3vj3o2" path="res://assets/rectangle.png" id="1_y7wee"]
 [ext_resource type="Script" uid="uid://dlqif4ntxcm7q" path="res://scripts/paddle.gd" id="2_mo4dg"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3xiby"]
+load_path = "res://.godot/imported/rectangle.png-d1ee9de140957abe1c5e54e5accfca55.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7wee"]
 size = Vector2(1974.8374, 389.87585)
@@ -15,7 +17,7 @@ size = Vector2(1901.6958, 365.22858)
 [node name="Paddle" type="Sprite2D" unique_id=405808638]
 position = Vector2(135, 297)
 scale = Vector2(0.027344024, 0.29259244)
-texture = ExtResource("1_y7wee")
+texture = SubResource("CompressedTexture2D_3xiby")
 script = ExtResource("2_mo4dg")
 metadata/_edit_group_ = true
 
