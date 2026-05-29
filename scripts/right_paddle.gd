@@ -1,21 +1,12 @@
-extends Sprite2D
-
-var speed = 1000
-var screen_size
-
-func _ready():
-	screen_size = get_viewport_rect().size
-
-func hello_world():
-	print("Hello World!")
+extends "res://scripts/paddle.gd"
 
 func _process(delta: float) -> void:
 	
 	var movement_direction = Vector2(0, 0)
 	
-	if Input.is_action_pressed("move_up_1"):
+	if Input.is_action_pressed("move_up_2"):
 		movement_direction = Vector2(0, -1)
-	if Input.is_action_pressed("move_down_1"):
+	if Input.is_action_pressed("move_down_2"):
 		movement_direction = Vector2(0, 1)
 		
 	var velocity = movement_direction * speed

@@ -13,7 +13,7 @@ size = Vector2(1901.6953, 324.8966)
 size = Vector2(1901.6958, 365.22858)
 
 [node name="Paddle" type="Sprite2D" unique_id=405808638]
-position = Vector2(28, 161)
+position = Vector2(135, 297)
 scale = Vector2(0.027344024, 0.29259244)
 texture = ExtResource("1_y7wee")
 script = ExtResource("2_mo4dg")
