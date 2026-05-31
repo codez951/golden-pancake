@@ -7,8 +7,6 @@ var half_height
 func _ready():
 	screen_size = get_viewport_rect().size
 	half_height = $Paddle.texture.get_height() * $Paddle.scale.y / 2.0
-	print(half_height)
-	print(get_viewport_rect().size)
 
 
 func _process(delta: float) -> void:
@@ -23,3 +21,7 @@ func _process(delta: float) -> void:
 	var velocity = movement_direction * speed
 	position += velocity * delta
 	position.y = clamp(position.y, half_height, screen_size.y - half_height)
+
+
+func _on_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	pass # Replace with function body.

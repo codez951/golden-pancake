@@ -38,3 +38,5 @@ shape = SubResource("RectangleShape2D_mo4dg")
 position = Vector2(-1, 105)
 scale = Vector2(0.027344024, 0.29259244)
 shape = SubResource("RectangleShape2D_y7wee")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
