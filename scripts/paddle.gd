@@ -1,6 +1,8 @@
 extends Area2D
 
-signal paddle_hit
+signal head_hit
+signal body_hit
+signal tail_hit
 
 var speed = 1000
 var screen_size
@@ -28,11 +30,11 @@ func _process(delta: float) -> void:
 func _on_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	match local_shape_index:
 		0:
-			paddle_hit.emit()
+			head_hit.emit()
 			print("Head")
 		1:
-			paddle_hit.emit()
+			body_hit.emit()
 			print("Body")
 		2:
-			paddle_hit.emit()
+			tail_hit.emit()
 			print("Tail")

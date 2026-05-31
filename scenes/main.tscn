@@ -21,7 +21,10 @@ scale = Vector2(0.2, 0.19)
 [node name="CollisionShape2D" parent="Ball" index="1" unique_id=622245170]
 position = Vector2(1, 1)
 
-[connection signal="paddle_hit" from="Paddle" to="Ball" method="_on_paddle_paddle_hit"]
-[connection signal="paddle_hit" from="RightPaddle" to="Ball" method="_on_right_paddle_paddle_hit"]
+[connection signal="body_hit" from="Paddle" to="Ball" method="_on_paddle_body_hit"]
+[connection signal="head_hit" from="Paddle" to="Ball" method="_on_paddle_head_hit"]
+[connection signal="body_hit" from="RightPaddle" to="Ball" method="_on_right_paddle_body_hit"]
+[connection signal="head_hit" from="RightPaddle" to="Ball" method="_on_right_paddle_head_hit"]
 
+[editable path="RightPaddle"]
 [editable path="Ball"]

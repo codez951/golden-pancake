@@ -8,18 +8,28 @@ var ball_direction = Vector2(-1, 0)
 func _ready():
 	linear_velocity = Vector2(-400, 0)
 	
+
 func _process(delta: float) -> void:
 	var velocity = ball_speed * ball_direction
 	linear_velocity = velocity
+	
+
+func _on_paddle_head_hit() -> void:
+	ball_direction.x = ball_direction.x * -1
+	if ball_direction.x > 0:
+		rotation += PI/4 * -1
+	elif ball_direction.x < 0:
+		rotation += PI/4
 
 
-func _on_paddle_paddle_hit() -> void:
-	print("Connection established")
+func _on_right_paddle_head_hit() -> void:
+	_on_paddle_head_hit()
+
+
+func _on_paddle_body_hit() -> void:
 	ball_direction = ball_direction * -1
-	print(ball_direction)
-	await get_tree().create_timer(1.0).timeout
-	print(ball_direction)
+	
 
 
-func _on_right_paddle_paddle_hit() -> void:
-	_on_paddle_paddle_hit()
+func _on_right_paddle_body_hit() -> void:
+	_on_paddle_body_hit()
