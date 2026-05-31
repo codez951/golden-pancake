@@ -1,5 +1,6 @@
 extends "res://scripts/paddle.gd"
 
+
 func _process(delta: float) -> void:
 	
 	var movement_direction = Vector2(0, 0)
