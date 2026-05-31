@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Area2D
 
 var speed = 1000
 var screen_size
@@ -6,10 +6,10 @@ var half_height
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	half_height = texture.get_height() * scale.y / 2.0
+	half_height = $Paddle.texture.get_height() * $Paddle.scale.y / 2.0
+	print(half_height)
+	print(get_viewport_rect().size)
 
-func hello_world():
-	print("Hello World!")
 
 func _process(delta: float) -> void:
 	
