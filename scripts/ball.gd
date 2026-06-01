@@ -3,6 +3,7 @@ extends RigidBody2D
 
 var ball_speed = 400
 var ball_direction = Vector2(-1, 0)
+var velocity
 
 
 func _ready():
@@ -10,7 +11,7 @@ func _ready():
 	
 
 func _process(delta: float) -> void:
-	var velocity = ball_speed * ball_direction
+	velocity = ball_speed * ball_direction
 	linear_velocity = velocity
 	
 
@@ -20,6 +21,7 @@ func _on_paddle_head_hit() -> void:
 		rotation += PI/4 * -1
 	elif ball_direction.x < 0:
 		rotation += PI/4
+	ball_direction = ball_direction.rotated(rotation)
 
 
 func _on_right_paddle_head_hit() -> void:
