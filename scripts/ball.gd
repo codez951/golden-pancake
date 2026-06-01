@@ -36,6 +36,7 @@ func _on_paddle_tail_hit() -> void:
 		rotation += PI/4 * -1
 	ball_direction = ball_direction.rotated(rotation)
 	
+
 func _on_right_paddle_tail_hit() -> void:
 	_on_paddle_tail_hit()
 
