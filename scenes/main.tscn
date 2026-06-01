@@ -28,8 +28,10 @@ position = Vector2(1, 1)
 
 [connection signal="body_hit" from="Paddle" to="Ball" method="_on_paddle_body_hit"]
 [connection signal="head_hit" from="Paddle" to="Ball" method="_on_paddle_head_hit"]
+[connection signal="tail_hit" from="Paddle" to="Ball" method="_on_paddle_tail_hit"]
 [connection signal="body_hit" from="RightPaddle" to="Ball" method="_on_right_paddle_body_hit"]
 [connection signal="head_hit" from="RightPaddle" to="Ball" method="_on_right_paddle_head_hit"]
+[connection signal="tail_hit" from="RightPaddle" to="Ball" method="_on_right_paddle_tail_hit"]
 [connection signal="body_entered" from="Ball" to="Ball" method="_on_body_entered"]
 
 [editable path="RightPaddle"]
