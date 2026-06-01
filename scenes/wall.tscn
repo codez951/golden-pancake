@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://72opuije2nyq"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uvhfp"]
+a = Vector2(1925, -2)
+b = Vector2(-2, 1)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wykyb"]
+a = Vector2(1926, -3)
+b = Vector2(-6, 1)
+
+[node name="Wall" type="StaticBody2D" unique_id=2098600120]
+
+[node name="TopWall" type="CollisionShape2D" parent="." unique_id=1136861305]
+shape = SubResource("SegmentShape2D_uvhfp")
+
+[node name="BottomWall" type="CollisionShape2D" parent="." unique_id=231525067]
+position = Vector2(0, 1200)
+shape = SubResource("SegmentShape2D_wykyb")

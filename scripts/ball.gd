@@ -32,6 +32,7 @@ func _on_paddle_body_hit() -> void:
 	ball_direction = ball_direction * -1
 	
 
-
 func _on_right_paddle_body_hit() -> void:
 	_on_paddle_body_hit()
+	
+	
