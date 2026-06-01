@@ -36,3 +36,6 @@ func _on_right_paddle_body_hit() -> void:
 	_on_paddle_body_hit()
 	
 	
+func _on_body_entered(body: Node) -> void:
+	if body is StaticBody2D:
+		ball_direction.y = ball_direction.y * -1
